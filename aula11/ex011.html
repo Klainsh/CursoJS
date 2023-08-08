@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="Validar" onclick="validar()">
+    <div id="texto_validado">Nacionalidade</div>
+
+    <script>
+        var nacionalidade = window.document.getElementById('nacionalidade')
+
+        var texto_validado = window.document.getElementById('texto_validado')
+        
+        function validar(){
+            if(nacionalidade.value.toUpperCase() === 'BRASILEIRO'){
+                texto_validado.innerHTML = `<p>Você é <strong>Brasileiro</strong>!</p>`
+            }else{
+                texto_validado.innerHTML = `<p>Você é <strong>Estrangeiro</strong>!</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
